@@ -1,0 +1,25 @@
+{
+	"name": "rkr/data-diff-phpstan-extension",
+	"description": "PHPStan extension for rkr/data-diff",
+	"license": "MIT",
+	"homepage": "https://github.com/rkrx/php-data-diff",
+	"type": "phpstan-extension",
+	"require": {
+		"php": ">= 8.2",
+		"phpstan/phpstan": "^2.1",
+		"rkr/data-diff": "*",
+		"rkr/phpstan-extensions": "^1.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"DataDiff\\PhpStan\\": "src/PhpStan/"
+		}
+	},
+	"extra": {
+		"phpstan": {
+			"includes": [
+				"extension.neon"
+			]
+		}
+	}
+}

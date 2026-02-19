@@ -1,0 +1,12 @@
+includes:
+	- %currentWorkingDirectory%/vendor/rkr/phpstan-extensions/extension.neon
+
+services:
+	-
+		class: DataDiff\PhpStan\MemoryDiffStorageBuilderReturnTypeExtension
+		tags:
+			- phpstan.broker.dynamicMethodReturnTypeExtension
+	-
+		class: DataDiff\PhpStan\DiffStorageStoreReturnTypeExtension
+		tags:
+			- phpstan.broker.dynamicMethodReturnTypeExtension
